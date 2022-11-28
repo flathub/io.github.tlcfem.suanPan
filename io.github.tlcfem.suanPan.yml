@@ -11,6 +11,7 @@ finish-args:
   - '--share=ipc'
 cleanup:
   - /vtk
+  - /opt
 modules:
   - name: suanPan
     buildsystem: cmake
@@ -28,7 +29,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        tag: 'suanPan-v2.6.1'
+        tag: suanPan-v2.6.1
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -41,8 +42,20 @@ modules:
           - '-DCMAKE_BUILD_TYPE=Release'
           - '-DBUILD_SHARED_LIBS=OFF'
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
+          - '-DUSE_MKL=ON'
+          - '-DMKLROOT=/opt/intel/oneapi/mkl/latest'
+          - '-DUSE_INTEL_OPENMP=OFF'
+          - '-DLINK_DYNAMIC_MKL=OFF'
         sources:
           - type: archive
-            url: >-
-              https://www.vtk.org/files/release/9.2/VTK-9.2.2.tar.gz
+            url: 'https://www.vtk.org/files/release/9.2/VTK-9.2.2.tar.gz'
             sha256: 1c5b0a2be71fac96ff4831af69e350f7a0ea3168981f790c000709dcf9121075
+      - name: mkl
+        buildsystem: simple
+        build-commands:
+          - sh ./l_onemkl_p_2022.2.0.8748_offline.sh -a --silent --eula accept
+        sources:
+          - type: file
+            url: >-
+              https://registrationcenter-download.intel.com/akdlm/irc_nas/18898/l_onemkl_p_2022.2.0.8748_offline.sh
+            sha256: 07d7caedd4b9f025c6fd439a0d2c2f279b18ecbbb63cadb864f6c63c1ed942db
