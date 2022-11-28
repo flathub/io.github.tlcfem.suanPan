@@ -11,7 +11,6 @@ finish-args:
   - '--share=ipc'
 cleanup:
   - /vtk
-  - /opt
 modules:
   - name: suanPan
     buildsystem: cmake
@@ -22,6 +21,10 @@ modules:
       - '-DUSE_HDF5=ON'
       - '-DUSE_EXTERNAL_VTK=ON'
       - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
+      - '-DUSE_MKL=ON'
+      - '-DMKLROOT=/srv/buildbot/intel/oneapi/mkl/latest'
+      - '-DUSE_INTEL_OPENMP=OFF'
+      - '-DLINK_DYNAMIC_MKL=OFF'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
       - install -Dm644 ../io.github.tlcfem.suanPan.metainfo.xml /app/share/metainfo/io.github.tlcfem.suanPan.metainfo.xml
@@ -42,10 +45,6 @@ modules:
           - '-DCMAKE_BUILD_TYPE=Release'
           - '-DBUILD_SHARED_LIBS=OFF'
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
-          - '-DUSE_MKL=ON'
-          - '-DMKLROOT=/opt/intel/oneapi/mkl/latest'
-          - '-DUSE_INTEL_OPENMP=OFF'
-          - '-DLINK_DYNAMIC_MKL=OFF'
         sources:
           - type: archive
             url: 'https://www.vtk.org/files/release/9.2/VTK-9.2.2.tar.gz'
