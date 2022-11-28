@@ -16,6 +16,7 @@
       <category>Education</category>
    </categories>
    <url type="homepage">https://github.com/TLCFEM/suanPan</url>
+   <url type="help">https://suanpan-manual.readthedocs.io/</url>
    <screenshots>
       <screenshot type="default">
          <caption>The application</caption>
@@ -32,4 +33,5 @@
    <developer_name>Theodore Chang</developer_name>
    <update_contact>tlcfem at gmail dot com</update_contact>
    <content_rating type="oars-1.1" />
+   <launchable type="url">https://suanpan-manual.readthedocs.io/</launchable>
 </component>
