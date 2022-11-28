@@ -11,6 +11,7 @@ finish-args:
   - '--share=ipc'
 cleanup:
   - /vtk
+  - /mkl
 modules:
   - name: suanPan
     buildsystem: cmake
@@ -22,7 +23,7 @@ modules:
       - '-DUSE_EXTERNAL_VTK=ON'
       - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
       - '-DUSE_MKL=ON'
-      - '-DMKLROOT=/srv/buildbot/intel/oneapi/mkl/latest'
+      - '-DMKLROOT=/app/mkl/oneapi/mkl/latest'
       - '-DUSE_INTEL_OPENMP=OFF'
       - '-DLINK_DYNAMIC_MKL=OFF'
     post-install:
@@ -52,7 +53,7 @@ modules:
       - name: mkl
         buildsystem: simple
         build-commands:
-          - sh ./l_onemkl_p_2022.2.0.8748_offline.sh -a --silent --eula accept
+          - sh ./l_onemkl_p_2022.2.0.8748_offline.sh -a --silent --eula accept --install-dir /app/mkl
         sources:
           - type: file
             url: >-
