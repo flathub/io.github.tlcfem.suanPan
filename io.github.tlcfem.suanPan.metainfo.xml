@@ -4,6 +4,24 @@
 	<name>suanPan</name>
 	<metadata_license>CC-BY-SA-4.0</metadata_license>
 	<summary>🧮 An Open Source, Parallel and Heterogeneous Finite Element Analysis Framework</summary>
+	<description>
+		<p>
+			[🧮 **suanPan**](https://tlcfem.github.io/suanPan/) is a finite element method (FEM) simulation platform for
+applications in fields such as solid mechanics and civil/structural/seismic engineering. The name **suanPan** (in some
+places such as suffix it is also abbreviated as **suPan**) comes from the term *Suan Pan* (算盤), which
+is [Chinese abacus](https://en.wikipedia.org/wiki/Suanpan). **suanPan** is written in modern high quality C++ code and
+is targeted to provide an efficient, concise, flexible and reliable FEM simulation platform.
+</p>
+		<p>
+**suanPan** is partially influenced by popular (non-)commercial FEA packages, such
+as [ABAQUS UNIFIED FEA](https://www.3ds.com/products-services/simulia/products/abaqus/), [ANSYS](http://www.ansys.com/)
+and [OpenSees](http://opensees.berkeley.edu/).
+</p>
+		<p>
+Please check documentation [here](https://tlcfem.gitbook.io/suanpan-manual/) and [here](http://suanpan-manual.rtfd.io/)
+for command references. Please consider starring ⭐ the project!
+		</p>
+	</description>
 	<icon type="remote" width="350" height="350">https://github.com/TLCFEM/suanPan/blob/3c5365c414c6264cb12fee6c67414d1079abf73a/Resource/suanPan-ua.svg</icon>
 	<categories>
 		<category>Science</category>
@@ -19,4 +37,5 @@
 	<releases>
 		<release version="2.6.1" date="2022-11-09" />
 	</releases>
+	<content_rating type="oars-1.1" />
 </component>
