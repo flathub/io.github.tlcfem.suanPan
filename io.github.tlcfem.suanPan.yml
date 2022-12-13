@@ -33,7 +33,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        tag: suanPan-v2.6.1
+        branch: dev
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
