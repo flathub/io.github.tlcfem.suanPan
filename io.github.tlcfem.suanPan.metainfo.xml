@@ -27,7 +27,7 @@
       <binary>suanPan</binary>
    </provides>
    <releases>
-      <release version="2.6.1" date="2022-11-09" />
+      <release version="2.7" date="2022-12-20" />
    </releases>
    <project_license>GPL-3.0-or-later</project_license>
    <developer_name>Theodore Chang</developer_name>
