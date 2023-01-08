@@ -34,7 +34,7 @@ modules:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
         branch: dev
-        commit: c14ce77c7498279ddefef414ffa57fc766667d40
+        commit: d76c59c2d12ec81b20734b6ff093797540a5808f
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -54,9 +54,9 @@ modules:
       - name: mkl
         buildsystem: simple
         build-commands:
-          - sh ./l_onemkl_p_2022.2.0.8748_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./l_onemkl_p_2023.0.0.25398_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
             url: >-
-              https://registrationcenter-download.intel.com/akdlm/irc_nas/18898/l_onemkl_p_2022.2.0.8748_offline.sh
-            sha256: 07d7caedd4b9f025c6fd439a0d2c2f279b18ecbbb63cadb864f6c63c1ed942db
+              https://registrationcenter-download.intel.com/akdlm/irc_nas/19138/l_onemkl_p_2023.0.0.25398_offline.sh
+            sha256: 0d61188e91a57bdb575782eb47a05ae99ea8eebefee6b2dfe20c6708e16e9927
