@@ -20,7 +20,7 @@
    <screenshots>
       <screenshot type="default">
          <caption>The application</caption>
-         <image type="source" width="1368" height="861">https://raw.githubusercontent.com/flathub/io.github.tlcfem.suanPan/beta-update/example.png</image>
+         <image type="source" width="1368" height="861">https://raw.githubusercontent.com/flathub/io.github.tlcfem.suanPan/beta/example.png</image>
       </screenshot>
    </screenshots>
    <provides>
