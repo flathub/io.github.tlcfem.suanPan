@@ -20,14 +20,14 @@
    <screenshots>
       <screenshot type="default">
          <caption>The application</caption>
-         <image type="source" width="1198" height="608">https://asciinema.org/a/491330.svg</image>
+         <image type="source" width="1368" height="861">https://github.com/flathub/io.github.tlcfem.suanPan/blob/beta/example.png</image>
       </screenshot>
    </screenshots>
    <provides>
       <binary>suanPan</binary>
    </provides>
    <releases>
-      <release version="2.8" date="2023-01-08" />
+      <release version="2.8" date="2023-01-10" />
    </releases>
    <project_license>GPL-3.0-or-later</project_license>
    <developer_name>Theodore Chang</developer_name>
