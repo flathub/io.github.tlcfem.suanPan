@@ -20,14 +20,14 @@
    <screenshots>
       <screenshot type="default">
          <caption>The application</caption>
-         <image type="source" width="1368" height="861">https://raw.githubusercontent.com/flathub/io.github.tlcfem.suanPan/beta/example.png</image>
+         <image type="source" width="1368" height="861">https://raw.githubusercontent.com/flathub/io.github.tlcfem.suanPan/screenshot/example.png</image>
       </screenshot>
    </screenshots>
    <provides>
       <binary>suanPan</binary>
    </provides>
    <releases>
-      <release version="2.8" date="2023-01-10" />
+      <release version="2.9" date="2023-01-25" />
    </releases>
    <project_license>GPL-3.0-or-later</project_license>
    <developer_name>Theodore Chang</developer_name>
