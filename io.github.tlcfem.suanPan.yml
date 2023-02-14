@@ -14,7 +14,7 @@ cleanup:
   - /oneapi
 modules:
   - name: suanPan
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
@@ -34,7 +34,7 @@ modules:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
         branch: dev
-        commit: 8b7e12e485e14adf7b2f3cb6e24ed55fefe6c825
+        commit: 618207fc3407cd358c27701cd4a4daa075d738b4
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
