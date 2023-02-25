@@ -14,7 +14,7 @@ cleanup:
   - /oneapi
 modules:
   - name: suanPan
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
@@ -33,7 +33,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        tag: suanPan-v2.8
+        tag: suanPan-v2.9
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
