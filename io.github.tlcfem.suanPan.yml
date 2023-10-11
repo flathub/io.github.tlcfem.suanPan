@@ -14,14 +14,14 @@ cleanup:
   - /oneapi
 modules:
   - name: suanPan
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
       - '-DBUILD_MULTITHREAD=ON'
       - '-DUSE_HDF5=ON'
       - '-DUSE_EXTERNAL_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
+      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.3/'
       - '-DUSE_MKL=ON'
       - '-DMKLROOT=/app/oneapi/mkl/latest'
       - '-DUSE_INTEL_OPENMP=OFF'
@@ -49,8 +49,8 @@ modules:
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
         sources:
           - type: archive
-            url: 'https://www.vtk.org/files/release/9.2/VTK-9.2.6.tar.gz'
-            sha256: 06fc8d49c4e56f498c40fcb38a563ed8d4ec31358d0101e8988f0bb4d539dd12
+            url: 'https://www.vtk.org/files/release/9.3/VTK-9.3.0.rc1.tar.gz'
+            sha256: 6581cec8e1c7a0290d1be0177eb84e2e7c3cb84d1ed154c7f1b57d227b7a7616
       - name: mkl
         buildsystem: simple
         build-commands:
