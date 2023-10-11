@@ -1,6 +1,6 @@
 app-id: io.github.tlcfem.suanPan
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 command: suanPan
 finish-args:
@@ -34,7 +34,7 @@ modules:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
         branch: dev
-        commit: 856f88765778ca9fa23b64bfb3ae8a32de3e727f
+        commit: 203516713941eb67309c37a311b1fb6c1fec6b5a
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
