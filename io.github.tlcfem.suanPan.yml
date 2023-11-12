@@ -20,7 +20,7 @@ modules:
       - '-DCMAKE_BUILD_TYPE=Release'
       - '-DBUILD_MULTITHREAD=ON'
       - '-DUSE_HDF5=ON'
-      - '-DUSE_EXTERNAL_VTK=ON'
+      - '-DUSE_VTK=ON'
       - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
       - '-DUSE_MKL=ON'
       - '-DMKLROOT=/app/oneapi/mkl/latest'
@@ -34,7 +34,7 @@ modules:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
         branch: dev
-        commit: da03fb0a10327f6496797f6bd158a72d720a49fc
+        commit: f4a306d310b606a419c7febc73cc548b9f4f29bb
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
