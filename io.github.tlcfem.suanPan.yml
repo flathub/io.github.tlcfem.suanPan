@@ -14,7 +14,7 @@ cleanup:
   - /oneapi
 modules:
   - name: suanPan
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
@@ -34,7 +34,7 @@ modules:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
         branch: dev
-        commit: a6c0cde91bbe3eadc8bef34f942dc9d4c0620f43
+        commit: 053d081eb1043caa6f7a93a7a558ba718e55c08f
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -54,9 +54,9 @@ modules:
       - name: mkl
         buildsystem: simple
         build-commands:
-          - sh ./l_onemkl_p_2023.2.0.49497_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./l_onemkl_p_2024.0.0.49673_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
             url: >-
-              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/adb8a02c-4ee7-4882-97d6-a524150da358/l_onemkl_p_2023.2.0.49497_offline.sh
-            sha256: 4a0d93da85a94d92e0ad35dc0fc3b3ab7f040bd55ad374c4d5ec81a57a2b872b
+              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/86d6a4c1-c998-4c6b-9fff-ca004e9f7455/l_onemkl_p_2024.0.0.49673_offline.sh
+            sha256: 2a3be7d01d75ba8cc3059f9a32ae72e5bfc93e68e72e94e79d7fa6ea2f7814de
