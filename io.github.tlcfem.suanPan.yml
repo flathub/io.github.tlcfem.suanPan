@@ -14,11 +14,12 @@ cleanup:
   - /oneapi
 modules:
   - name: suanPan
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
       - '-DBUILD_MULTITHREAD=ON'
+      - '-DUSE_AVX=OFF'
       - '-DUSE_HDF5=ON'
       - '-DUSE_VTK=ON'
       - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
