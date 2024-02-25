@@ -38,7 +38,7 @@
    </releases>
    <project_license>GPL-3.0-or-later</project_license>
    <developer_name>Theodore Chang</developer_name>
-   <update_contact>tlcfem at gmail dot com</update_contact>
+   <update_contact>tlcfem@gmail.com</update_contact>
    <content_rating type="oars-1.1" />
    <launchable type="desktop-id">io.github.tlcfem.suanPan.desktop</launchable>
    <launchable type="url">https://tlcfem.github.io/suanPan-manual/latest/</launchable>
