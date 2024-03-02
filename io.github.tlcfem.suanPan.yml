@@ -19,7 +19,7 @@ modules:
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
       - '-DBUILD_MULTITHREAD=ON'
-      - '-DUSE_AVX=OFF'
+      - '-DUSE_AVX2=OFF'
       - '-DUSE_HDF5=ON'
       - '-DUSE_VTK=ON'
       - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
@@ -35,7 +35,7 @@ modules:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
         branch: dev
-        commit: 41679da97da8a044ee97e3a482c8efae0bd1a7c0
+        commit: 8a95f28cdeb448341a0dc434e03485da0b8f13d6
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
