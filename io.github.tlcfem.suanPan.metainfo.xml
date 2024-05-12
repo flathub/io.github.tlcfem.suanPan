@@ -5,7 +5,7 @@
    <metadata_license>CC-BY-SA-4.0</metadata_license>
    <summary>🧮 An Open Source, Parallel and Heterogeneous Finite Element Analysis Framework</summary>
    <description>
-      <p>🧮 suanPan is a finite element method (FEM) simulation platform for applications in fields such as solid mechanics and civil/structural/seismic engineering. The name suanPan (in some places such as suffix it is also abbreviated as suPan) comes from the term Suan Pan (算盤), which is Chinese abacus. suanPan is written in modern high quality C++ code and is targeted to provide an efficient, concise, flexible and reliable FEM simulation platform.</p>
+      <p>🧮 suanPan is a finite element method (FEM) simulation platform for applications in fields such as solid mechanics and civil/structural/seismic engineering. suanPan is written in modern high quality C++ code and is targeted to provide an efficient, concise, flexible and reliable FEM simulation platform.</p>
       <p>suanPan is partially influenced by popular (non-)commercial FEA packages, such as ABAQUS UNIFIED FEA, ANSYS and OpenSees.</p>
       <p>The flatpak requires: 64-bit, x86_64</p>
    </description>
@@ -26,7 +26,8 @@
       <binary>suanPan</binary>
    </provides>
    <releases>
-      <release version="3.4" date="2024-04-22" />
+      <release version="3.5" date="2024-05-12" />
+      <release version="3.4" date="2024-05-12" />
       <release version="3.3" date="2024-01-24" />
       <release version="3.2" date="2023-11-05" />
       <release version="3.1" date="2023-09-01" />
