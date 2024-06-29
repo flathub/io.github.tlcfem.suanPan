@@ -22,7 +22,7 @@ modules:
       - '-DUSE_AVX2=OFF'
       - '-DUSE_HDF5=ON'
       - '-DUSE_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
+      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.3/'
       - '-DUSE_MKL=ON'
       - '-DMKLROOT=/app/oneapi/mkl/latest'
       - '-DUSE_INTEL_OPENMP=OFF'
