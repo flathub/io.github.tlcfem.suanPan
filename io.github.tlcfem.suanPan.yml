@@ -1,6 +1,6 @@
 app-id: io.github.tlcfem.suanPan
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 command: suanPan
 finish-args:
@@ -22,7 +22,7 @@ modules:
       - '-DUSE_AVX2=OFF'
       - '-DUSE_HDF5=ON'
       - '-DUSE_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
+      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.3/'
       - '-DUSE_MKL=ON'
       - '-DMKLROOT=/app/oneapi/mkl/latest'
       - '-DUSE_INTEL_OPENMP=OFF'
@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: 6b17577a38a431d0016fb06d8ee09b87407ddd4e
+        commit: c15e811221c2f1a9a8e8c3247eac3c96e5d427de
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -49,8 +49,10 @@ modules:
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
         sources:
           - type: archive
-            url: 'https://www.vtk.org/files/release/9.2/VTK-9.2.6.tar.gz'
-            sha256: 06fc8d49c4e56f498c40fcb38a563ed8d4ec31358d0101e8988f0bb4d539dd12
+            url: 'https://www.vtk.org/files/release/9.3/VTK-9.3.1.tar.gz'
+            sha256: 8354ec084ea0d2dc3d23dbe4243823c4bfc270382d0ce8d658939fd50061cab8
+          - type: patch
+            path: SIGFPE.patch
       - name: mkl
         buildsystem: simple
         build-commands:

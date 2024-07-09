@@ -1,0 +1,26 @@
+diff --git a/Filters/CellGrid/vtkDGHex.cxx b/Filters/CellGrid/vtkDGHex.cxx
+index 19f12127da..c32782cccf 100644
+--- a/Filters/CellGrid/vtkDGHex.cxx
++++ b/Filters/CellGrid/vtkDGHex.cxx
+@@ -17,7 +17,7 @@ using namespace vtk::literals;
+ vtkStandardNewMacro(vtkDGHex);
+ 
+ // TODO: Use IMPLEMENTABLE/IMPLEMENTS and vtkObjectFactory or equivalent.
+-static bool registerType = vtkCellMetadata::RegisterType<vtkDGHex>();
++// static bool registerType = vtkCellMetadata::RegisterType<vtkDGHex>();
+ 
+ const std::array<std::array<double, 3>, 8> vtkDGHex::Parameters{ { { -1., -1., -1. },
+   { +1., -1., -1. }, { +1., +1., -1. }, { -1., +1., -1. }, { -1., -1., +1. }, { +1., -1., +1. },
+diff --git a/Filters/CellGrid/vtkDGTet.cxx b/Filters/CellGrid/vtkDGTet.cxx
+index a41388ba00..e3031f55a6 100644
+--- a/Filters/CellGrid/vtkDGTet.cxx
++++ b/Filters/CellGrid/vtkDGTet.cxx
+@@ -17,7 +17,7 @@ using namespace vtk::literals;
+ vtkStandardNewMacro(vtkDGTet);
+ 
+ // TODO: Use IMPLEMENTABLE/IMPLEMENTS and vtkObjectFactory or equivalent.
+-static bool registerType = vtkCellMetadata::RegisterType<vtkDGTet>();
++// static bool registerType = vtkCellMetadata::RegisterType<vtkDGTet>();
+ 
+ const std::array<std::array<double, 3>, 4> vtkDGTet::Parameters{ { { 0., 0., 0. }, { +1., 0., 0. },
+   { 0., +1., 0. }, { 0., 0., +1. } } };
