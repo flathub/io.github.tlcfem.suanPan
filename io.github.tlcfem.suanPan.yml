@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: f515924702a1c7721980a86e58db367c1ca84516
+        commit: c15e811221c2f1a9a8e8c3247eac3c96e5d427de
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -51,6 +51,8 @@ modules:
           - type: archive
             url: 'https://www.vtk.org/files/release/9.3/VTK-9.3.1.tar.gz'
             sha256: 8354ec084ea0d2dc3d23dbe4243823c4bfc270382d0ce8d658939fd50061cab8
+          - type: patch
+            path: SIGFPE.patch
       - name: mkl
         buildsystem: simple
         build-commands:
