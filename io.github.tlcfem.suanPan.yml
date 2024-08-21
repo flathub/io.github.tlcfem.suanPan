@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: c15e811221c2f1a9a8e8c3247eac3c96e5d427de
+        commit: 9333ba8a967ecb0453e2dae7aa506125ce94e666
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
