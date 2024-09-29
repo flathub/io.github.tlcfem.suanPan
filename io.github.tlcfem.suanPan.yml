@@ -1,6 +1,6 @@
 app-id: io.github.tlcfem.suanPan
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: suanPan
 finish-args:
@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: 75da64116454fa0756ef5c39a78431c3a7781ebe
+        commit: 6e4f432ce0a3cc7edd65782034afa65cd8d071ed
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -56,9 +56,9 @@ modules:
       - name: mkl
         buildsystem: simple
         build-commands:
-          - sh ./l_onemkl_p_2024.2.1.105_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./l_onemkl_p_2024.2.2.17_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
             url: >-
-              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/6e00e368-b61d-4f87-a409-9b510c022a37/l_onemkl_p_2024.2.1.105_offline.sh
-            sha256: adfb1391f87a0a638772ac3146db92126a4accf4da1fe8707a000b27dd2448ef
+              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/89a381f6-f85d-4dda-ae62-30d51470f53c/l_onemkl_p_2024.2.2.17_offline.sh
+            sha256: 6b64ab95567bee53d6cf7e78f9f7b15695902fb9da0d20c29e638ad001b6b348
