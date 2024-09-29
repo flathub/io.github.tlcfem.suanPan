@@ -1,6 +1,6 @@
 app-id: io.github.tlcfem.suanPan
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: suanPan
 finish-args:
@@ -22,7 +22,7 @@ modules:
       - '-DUSE_AVX2=OFF'
       - '-DUSE_HDF5=ON'
       - '-DUSE_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.2/'
+      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.3/'
       - '-DUSE_MKL=ON'
       - '-DMKLROOT=/app/oneapi/mkl/latest'
       - '-DUSE_INTEL_OPENMP=OFF'
@@ -49,14 +49,16 @@ modules:
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
         sources:
           - type: archive
-            url: 'https://www.vtk.org/files/release/9.2/VTK-9.2.6.tar.gz'
-            sha256: 06fc8d49c4e56f498c40fcb38a563ed8d4ec31358d0101e8988f0bb4d539dd12
+            url: 'https://www.vtk.org/files/release/9.3/VTK-9.3.1.tar.gz'
+            sha256: 8354ec084ea0d2dc3d23dbe4243823c4bfc270382d0ce8d658939fd50061cab8
+          - type: patch
+            path: SIGFPE.patch
       - name: mkl
         buildsystem: simple
         build-commands:
-          - sh ./l_onemkl_p_2024.2.1.105_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./l_onemkl_p_2024.2.2.17_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
             url: >-
-              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/6e00e368-b61d-4f87-a409-9b510c022a37/l_onemkl_p_2024.2.1.105_offline.sh
-            sha256: adfb1391f87a0a638772ac3146db92126a4accf4da1fe8707a000b27dd2448ef
+              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/89a381f6-f85d-4dda-ae62-30d51470f53c/l_onemkl_p_2024.2.2.17_offline.sh
+            sha256: 6b64ab95567bee53d6cf7e78f9f7b15695902fb9da0d20c29e638ad001b6b348
