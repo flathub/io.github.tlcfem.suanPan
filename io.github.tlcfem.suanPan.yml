@@ -22,7 +22,7 @@ modules:
       - '-DUSE_AVX2=OFF'
       - '-DUSE_HDF5=ON'
       - '-DUSE_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.3/'
+      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.4/'
       - '-DUSE_MKL=ON'
       - '-DMKLROOT=/app/oneapi/mkl/latest'
       - '-DUSE_INTEL_OPENMP=OFF'
@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: 027a24a0f6f0b6cfaa6858022eb7733b86d640a3
+        commit: 27c2cd921a11df0c49e808b92a04ba2588685f67
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -49,16 +49,14 @@ modules:
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
         sources:
           - type: archive
-            url: 'https://www.vtk.org/files/release/9.3/VTK-9.3.1.tar.gz'
-            sha256: 8354ec084ea0d2dc3d23dbe4243823c4bfc270382d0ce8d658939fd50061cab8
-          - type: patch
-            path: SIGFPE.patch
+            url: 'https://www.vtk.org/files/release/9.4/VTK-9.4.0.tar.gz'
+            sha256: 16f3ffd65fafd68fab469bcb091395bf5432617c7db27cbce86a737bf09ec5b0
       - name: mkl
         buildsystem: simple
         build-commands:
-          - sh ./intel-onemkl-2025.0.0.940_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./intel-onemkl-2025.0.1.16_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
             url: >-
-              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/79153e0f-74d7-45af-b8c2-258941adf58a/intel-onemkl-2025.0.0.940_offline.sh
-            sha256: c0fe8c43718c56858df96ad469b22d9d5e5c1aa4b872e34c6cbebfb17bd15b9c
+              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/246ea40e-5aa7-42a4-81fa-0c029dc8650f/intel-onemkl-2025.0.1.16_offline.sh
+            sha256: bd86677aa17499c89ca7a3c3c83b73f0644147e4f1d2a218b45a7349cf582f4a
