@@ -18,15 +18,15 @@ modules:
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
-      - '-DBUILD_MULTITHREAD=ON'
-      - '-DUSE_AVX2=OFF'
-      - '-DUSE_HDF5=ON'
-      - '-DUSE_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.4/'
-      - '-DUSE_MKL=ON'
       - '-DMKLROOT=/app/oneapi/mkl/latest'
-      - '-DUSE_INTEL_OPENMP=OFF'
-      - '-DLINK_DYNAMIC_MKL=OFF'
+      - '-DSP_BUILD_PARALLEL=ON'
+      - '-DSP_ENABLE_AVX2=OFF'
+      - '-DSP_ENABLE_HDF5=ON'
+      - '-DSP_ENABLE_IOMP=OFF'
+      - '-DSP_ENABLE_MKL=ON'
+      - '-DSP_ENABLE_SHARED_MKL=OFF'
+      - '-DSP_ENABLE_VTK=ON'
+      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.4/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
       - install -Dm644 ../io.github.tlcfem.suanPan.metainfo.xml /app/share/metainfo/io.github.tlcfem.suanPan.metainfo.xml
@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: 6aed22be4acff2dbaa939bcf0a30429a680d084b
+        commit: a2c0e791214f19de51ce5ba6f1f61641ec2a1753
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
