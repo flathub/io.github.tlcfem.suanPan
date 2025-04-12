@@ -26,7 +26,8 @@
       <binary>suanPan</binary>
    </provides>
    <releases>
-      <release version="3.7" date="2025-04-08" />
+      <release version="3.8" date="2025-04-12" />
+      <release version="3.7" date="2025-04-12" />
       <release version="3.6" date="2025-02-08" />
       <release version="3.5" date="2024-09-11" />
       <release version="3.4" date="2024-05-12" />
