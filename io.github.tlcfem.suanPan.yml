@@ -18,7 +18,7 @@ modules:
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
-      - '-DMKLROOT=/app/oneapi/mkl/latest'
+      - '-DMKL_PATH=/app/oneapi/mkl/latest'
       - '-DSP_BUILD_PARALLEL=ON'
       - '-DSP_ENABLE_AVX2=OFF'
       - '-DSP_ENABLE_HDF5=ON'
@@ -26,7 +26,7 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.4/'
+      - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.4/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
       - install -Dm644 ../io.github.tlcfem.suanPan.metainfo.xml /app/share/metainfo/io.github.tlcfem.suanPan.metainfo.xml
