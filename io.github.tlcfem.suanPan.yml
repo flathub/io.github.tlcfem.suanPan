@@ -18,7 +18,7 @@ modules:
     builddir: true
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
-      - '-DMKLROOT=/app/oneapi/mkl/latest'
+      - '-DMKL_PATH=/app/oneapi/mkl/latest'
       - '-DSP_BUILD_PARALLEL=ON'
       - '-DSP_ENABLE_AVX2=OFF'
       - '-DSP_ENABLE_HDF5=ON'
@@ -26,7 +26,7 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DVTK_DIR=/app/vtk/lib/cmake/vtk-9.4/'
+      - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.4/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
       - install -Dm644 ../io.github.tlcfem.suanPan.metainfo.xml /app/share/metainfo/io.github.tlcfem.suanPan.metainfo.xml
@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        tag: suanPan-v3.7.1
+        tag: suanPan-v3.8
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -54,9 +54,9 @@ modules:
       - name: mkl
         buildsystem: simple
         build-commands:
-          - sh ./intel-onemkl-2025.1.0.803_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./intel-onemkl-2025.2.0.629_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
             url: >-
-              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/dc93af13-2b3f-40c3-a41b-2bc05a707a80/intel-onemkl-2025.1.0.803_offline.sh
-            sha256: 80a4b1338b48b3fbee55a8dc784f92e5e88d618f1b99d80f5f207a00c86a6638
+              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/47c7d946-fca1-441a-b0df-b094e3f045ea/intel-onemkl-2025.2.0.629_offline.sh
+            sha256: 7bfdde1379a9cd3c2784af4352931a0527a5c483c9da71e851a3f06e055af7c7
