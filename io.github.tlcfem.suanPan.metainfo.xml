@@ -7,7 +7,7 @@
    <description>
       <p>🧮 suanPan is a finite element method (FEM) simulation platform for applications in fields such as solid mechanics and civil/structural/seismic engineering. suanPan is written in modern high quality C++ code and is targeted to provide an efficient, concise, flexible and reliable FEM simulation platform.</p>
       <p>suanPan is partially influenced by popular (non-)commercial FEA packages, such as ABAQUS UNIFIED FEA, ANSYS and OpenSees.</p>
-      <p>The flatpak requires: 64-bit, x86_64</p>
+      <p>The flatpak requires: x86_64</p>
    </description>
    <icon type="remote" width="350" height="350">https://github.com/TLCFEM/suanPan/blob/3c5365c414c6264cb12fee6c67414d1079abf73a/Resource/suanPan-ua.svg</icon>
    <categories>
@@ -26,7 +26,9 @@
       <binary>suanPan</binary>
    </provides>
    <releases>
-      <release version="4.0" date="2025-09-04" />
+      <release version="3.9.3" date="2025-09-24" />
+      <release version="3.9.2" date="2025-09-23" />
+      <release version="3.9.1" date="2025-09-22" />
       <release version="3.9" date="2025-09-04" />
       <release version="3.8" date="2025-06-26" />
       <release version="3.7.1" date="2025-05-16" />
