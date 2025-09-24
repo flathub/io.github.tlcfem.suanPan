@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: 6d73a5f92afa2aff9a6b1f3fab0a0d8ca0bb832c
+        commit: 0ed0a44b562f1f76742e0d626a67a2e15687ea3f
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -49,8 +49,8 @@ modules:
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
         sources:
           - type: archive
-            url: 'https://vtk.org/files/release/9.5/VTK-9.5.1.tar.gz'
-            sha256: 14443661c7b095d05b4e376fb3f40613f173e34fc9d4658234e9ec1d624a618f
+            url: 'https://vtk.org/files/release/9.5/VTK-9.5.2.tar.gz'
+            sha256: cee64b98d270ff7302daf1ef13458dff5d5ac1ecb45d47723835f7f7d562c989
       - name: mkl
         buildsystem: simple
         build-commands:
