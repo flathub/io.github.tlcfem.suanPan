@@ -16,6 +16,7 @@
    </categories>
    <url type="homepage">https://github.com/TLCFEM/suanPan</url>
    <url type="help">https://tlcfem.github.io/suanPan-manual/latest/</url>
+   <url type="vcs-browser">https://github.com/TLCFEM/suanPan</url>
    <screenshots>
       <screenshot type="default">
          <caption>The application</caption>
@@ -26,7 +27,7 @@
       <binary>suanPan</binary>
    </provides>
    <releases>
-      <release version="3.9.5" date="2026-01-11" />
+      <release version="3.9.5" date="2026-01-23" />
       <release version="3.9.4" date="2025-11-11" />
       <release version="3.9.3" date="2025-10-15" />
       <release version="3.9.2" date="2025-09-23" />
