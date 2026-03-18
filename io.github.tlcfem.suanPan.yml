@@ -16,6 +16,9 @@ modules:
   - name: suanPan
     buildsystem: cmake-ninja
     builddir: true
+    build-options:
+      build-args:
+        - '--share=network'
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
       - '-DMKL_PATH=/app/oneapi/mkl/latest'
