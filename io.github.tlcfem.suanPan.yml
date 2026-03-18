@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: d9cf7493bed9d60d53f56eacb5028bf6c99c6860
+        commit: 2de5dfb8fd1c2201955becbc86ac52ee069f5116
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -52,6 +52,8 @@ modules:
             url: 'https://vtk.org/files/release/9.5/VTK-9.5.2.tar.gz'
             sha256: cee64b98d270ff7302daf1ef13458dff5d5ac1ecb45d47723835f7f7d562c989
       - name: mkl
+        only-arches:
+          - x86_64
         buildsystem: simple
         build-commands:
           - sh ./intel-onemkl-2025.3.1.11_offline.sh -a --silent --eula accept --install-dir /app/oneapi
