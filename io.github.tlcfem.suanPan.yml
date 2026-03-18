@@ -16,9 +16,6 @@ modules:
   - name: suanPan
     buildsystem: cmake-ninja
     builddir: true
-    build-options:
-      build-args:
-        - '--share=network'
     config-opts:
       - '-DCMAKE_BUILD_TYPE=Release'
       - '-DMKL_PATH=/app/oneapi/mkl/latest'
@@ -29,7 +26,6 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DSP_FETCH_DEPENDENCY=ON'
       - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.5/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
@@ -38,7 +34,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/TLCFEM/suanPan.git'
-        commit: ec0d9b322b1aacb97f8b4447d073013f7b543857
+        commit: 2de5dfb8fd1c2201955becbc86ac52ee069f5116
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
