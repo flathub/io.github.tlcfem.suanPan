@@ -48,7 +48,7 @@ modules:
           - '-DCMAKE_BUILD_TYPE=Release'
           - '-DBUILD_SHARED_LIBS=OFF'
           - '-DCMAKE_INSTALL_PREFIX=/app/vtk'
-          - '-DCMAKE_CXX_FLAGS="-Wno-stringop-overflow"'
+          - '-DCMAKE_CXX_FLAGS="-Wno-stringop-overflow -Wno-stringop-overead"'
         sources:
           - type: archive
             url: 'https://vtk.org/files/release/9.6/VTK-9.6.1.tar.gz'
