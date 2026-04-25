@@ -16,6 +16,7 @@
    </categories>
    <url type="homepage">https://github.com/TLCFEM/suanPan</url>
    <url type="help">https://tlcfem.github.io/suanPan-manual/latest/</url>
+   <url type="vcs-browser">https://github.com/TLCFEM/suanPan</url>
    <screenshots>
       <screenshot type="default">
          <caption>The application</caption>
