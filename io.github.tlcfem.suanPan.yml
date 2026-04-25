@@ -26,7 +26,7 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DSUANPAN_DATE="Mar 31 2026"'
+      - '-DSUANPAN_DATE="Apr 25 2026"'
       - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.6/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
@@ -34,8 +34,8 @@ modules:
       - install -Dm644 ../io.github.tlcfem.suanPan.desktop /app/share/applications/io.github.tlcfem.suanPan.desktop
     sources:
       - type: git
-        url: 'https://github.com/TLCFEM/suanPan.git'
-        tag: suanPan-v3.9.4
+        url: https://github.com/TLCFEM/suanPan.git
+        tag: suanPan-v4.0
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -51,7 +51,7 @@ modules:
           - '-DCMAKE_CXX_FLAGS=-Wno-stringop-overflow -Wno-stringop-overread'
         sources:
           - type: archive
-            url: 'https://vtk.org/files/release/9.6/VTK-9.6.1.tar.gz'
+            url: https://vtk.org/files/release/9.6/VTK-9.6.1.tar.gz
             sha256: 47ca9af899165a33b935533046acce7c0aa3c007f0b57880665bb89d9986543f
       - name: mkl
         only-arches:
@@ -61,6 +61,5 @@ modules:
           - sh ./intel-onemkl-2025.3.1.11_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
-            url: >-
-              https://registrationcenter-download.intel.com/akdlm/IRC_NAS/6a17080f-f0de-41b9-b587-52f92512c59a/intel-onemkl-2025.3.1.11_offline.sh
+            url: https://registrationcenter-download.intel.com/akdlm/IRC_NAS/6a17080f-f0de-41b9-b587-52f92512c59a/intel-onemkl-2025.3.1.11_offline.sh
             sha256: 89753ce0be82d31669172c08c6b6b863f2e25558d775496349473b3299240a01
