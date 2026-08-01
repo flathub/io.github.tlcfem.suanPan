@@ -26,7 +26,7 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DSUANPAN_DATE="Jul 17 2026"'
+      - '-DSUANPAN_DATE="Jul 31 2026"'
       - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.6/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
@@ -35,7 +35,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/TLCFEM/suanPan.git
-        commit: 2c706b4043b4d1de109f1e6aa1c56f5c03d126b2
+        commit: 8adcfd67068b74ecd0ec02f7493af6c5869606ce
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -58,8 +58,8 @@ modules:
           - x86_64
         buildsystem: simple
         build-commands:
-          - sh ./intel-onemkl-2026.0.0.909_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./intel-onemkl-2026.1.0.237_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
-            url: https://registrationcenter-download.intel.com/akdlm/IRC_NAS/db60f483-f02e-4f7e-9bcd-5e01dba97444/intel-onemkl-2026.0.0.909_offline.sh
-            sha256: f63fd6ce3a374993caa0482fec0a3b9f2c312beeabff82009ab51fca90c97225
+            url: https://registrationcenter-download.intel.com/akdlm/IRC_NAS/17f37e16-768e-40d2-bcf8-c252dc6c5499/intel-onemkl-2026.1.0.237_offline.sh
+            sha256: 854deea4c4eec21d23cfb895b0c76ac02b5a76e3a9581a39b4c69fb7ffc69146
