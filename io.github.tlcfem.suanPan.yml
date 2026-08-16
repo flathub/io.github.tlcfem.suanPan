@@ -26,8 +26,8 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DSUANPAN_DATE="Aug 9 2026"'
-      - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.6/'
+      - '-DSUANPAN_DATE="Aug 16 2026"'
+      - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.7/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
       - install -Dm644 ../io.github.tlcfem.suanPan.metainfo.xml /app/share/metainfo/io.github.tlcfem.suanPan.metainfo.xml
@@ -35,7 +35,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/TLCFEM/suanPan.git
-        commit: 78817ea7ba442049e56ec968ea566d7dfb4a692e
+        commit: e59cd2edfe53024397dbc0c477384f9432c0b3bc
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -51,8 +51,8 @@ modules:
           - '-DCMAKE_CXX_FLAGS=-Wno-stringop-overflow -Wno-stringop-overread'
         sources:
           - type: archive
-            url: https://vtk.org/files/release/9.6/VTK-9.6.2.tar.gz
-            sha256: aed12cec12a9609179bf66329070266627ca64244a10856a452b2a17ffb04a1d
+            url: https://vtk.org/files/release/9.7/VTK-9.7.0.tar.gz
+            sha256: affdb7a15ec34ee0174407f911ab70b646c7af01161818bbab4e1160b7eff720
       - name: mkl
         only-arches:
           - x86_64
