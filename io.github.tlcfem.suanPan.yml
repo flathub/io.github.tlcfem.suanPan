@@ -1,6 +1,6 @@
 app-id: io.github.tlcfem.suanPan
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: suanPan
 finish-args:
@@ -26,8 +26,8 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DSUANPAN_DATE="Jul 17 2026"'
-      - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.6/'
+      - '-DSUANPAN_DATE="Sep 10 2026"'
+      - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.7/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
       - install -Dm644 ../io.github.tlcfem.suanPan.metainfo.xml /app/share/metainfo/io.github.tlcfem.suanPan.metainfo.xml
@@ -35,8 +35,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/TLCFEM/suanPan.git
-        tag: suanPan-v4.1.1
-        commit: 970ac3ea8c05eb33aea73a3ffad832edf881104f
+        tag: suanPan-v4.2
+        commit: c4ab65a06e321939b59b2103eb5c221bc1be68e2
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
@@ -52,15 +52,15 @@ modules:
           - '-DCMAKE_CXX_FLAGS=-Wno-stringop-overflow -Wno-stringop-overread'
         sources:
           - type: archive
-            url: https://vtk.org/files/release/9.6/VTK-9.6.2.tar.gz
-            sha256: aed12cec12a9609179bf66329070266627ca64244a10856a452b2a17ffb04a1d
+            url: https://vtk.org/files/release/9.7/VTK-9.7.0.tar.gz
+            sha256: affdb7a15ec34ee0174407f911ab70b646c7af01161818bbab4e1160b7eff720
       - name: mkl
         only-arches:
           - x86_64
         buildsystem: simple
         build-commands:
-          - sh ./intel-onemkl-2026.0.0.909_offline.sh -a --silent --eula accept --install-dir /app/oneapi
+          - sh ./intel-onemkl-2026.1.0.237_offline.sh -a --silent --eula accept --install-dir /app/oneapi
         sources:
           - type: file
-            url: https://registrationcenter-download.intel.com/akdlm/IRC_NAS/db60f483-f02e-4f7e-9bcd-5e01dba97444/intel-onemkl-2026.0.0.909_offline.sh
-            sha256: f63fd6ce3a374993caa0482fec0a3b9f2c312beeabff82009ab51fca90c97225
+            url: https://registrationcenter-download.intel.com/akdlm/IRC_NAS/17f37e16-768e-40d2-bcf8-c252dc6c5499/intel-onemkl-2026.1.0.237_offline.sh
+            sha256: 854deea4c4eec21d23cfb895b0c76ac02b5a76e3a9581a39b4c69fb7ffc69146
