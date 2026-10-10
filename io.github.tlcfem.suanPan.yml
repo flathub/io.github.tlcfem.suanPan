@@ -26,7 +26,7 @@ modules:
       - '-DSP_ENABLE_MKL=ON'
       - '-DSP_ENABLE_SHARED_MKL=OFF'
       - '-DSP_ENABLE_VTK=ON'
-      - '-DSUANPAN_DATE="Oct 5 2026"'
+      - '-DSUANPAN_DATE="Oct 10 2026"'
       - '-DVTK_PATH=/app/vtk/lib/cmake/vtk-9.7/'
     post-install:
       - install -Dm644 ../Resource/suanPan-ua.svg /app/share/icons/hicolor/scalable/apps/io.github.tlcfem.suanPan.svg
@@ -35,7 +35,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/TLCFEM/suanPan.git
-        commit: 71586e6eb8d21bed59b2b5cfc94274e771d8604f
+        commit: 97da75b0163584eefa4923c1cded1863893e916f
       - type: file
         path: io.github.tlcfem.suanPan.metainfo.xml
       - type: file
