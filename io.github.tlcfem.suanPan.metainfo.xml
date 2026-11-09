@@ -5,9 +5,64 @@
    <metadata_license>CC-BY-SA-4.0</metadata_license>
    <summary>🧮 An Open Source, Parallel and Heterogeneous Finite Element Analysis Framework</summary>
    <description>
-      <p>🧮 suanPan is a finite element method (FEM) simulation platform for applications in fields such as solid mechanics and civil/structural/seismic engineering. suanPan is written in modern high quality C++ code and is targeted to provide an efficient, concise, flexible and reliable FEM simulation platform.</p>
-      <p>suanPan is partially influenced by popular (non-)commercial FEA packages, such as ABAQUS UNIFIED FEA, ANSYS and OpenSees.</p>
-      <p>On x86_64, Intel® oneAPI Math Kernel Library (oneMKL) is used. On aarch64, OpenBLAS is used. If the performance is not optimal, consider using portable binaries from GitHub or compiling the application locally.</p>
+      <p>suanPan is a powerful finite element method (FEM) simulation platform for solid mechanics, civil engineering, structural engineering and earthquake engineering. It combines a fast modern C++ core with a flexible, command-driven modelling language, making it suitable for research, teaching and demanding engineering analysis.</p>
+      <p>From small validation models to large-scale nonlinear simulations, suanPan brings analysis procedures, element formulations, material models and high-performance solvers together in one integrated, cross-platform application.</p>
+      <heading>Analysis capabilities</heading>
+      <ul>
+         <li>Static and nonlinear static analysis</li>
+         <li>Dynamic and seismic analysis with implicit and explicit time integration</li>
+         <li>Arc-length continuation and collapse analysis</li>
+         <li>Frequency, eigenvalue and buckling analysis</li>
+         <li>Structural optimization workflows</li>
+         <li>Response spectrum and single-degree-of-freedom response tools</li>
+      </ul>
+      <heading>Extensive modelling library</heading>
+      <ul>
+         <li>Beam, truss, membrane, plate, shell, solid, contact, joint, embedded, mass and spring elements</li>
+         <li>Elastic, plastic, damage, viscoelastic, hysteretic, orthotropic and geotechnical material models</li>
+         <li>Metal plasticity, concrete damage, soil and user-defined constitutive models</li>
+         <li>Structural, fibre and NM section models with code-based design support</li>
+         <li>Constraints for multi-point connections, rigid walls, embedding, gaps and particle collision</li>
+         <li>A rich collection of load types, recorders and analysis steps</li>
+      </ul>
+      <heading>High performance</heading>
+      <ul>
+         <li>Shared-memory parallelism with Intel TBB</li>
+         <li>Distributed-memory parallelism with MPI for cluster simulations</li>
+         <li>Optional GPU acceleration with CUDA and MAGMA</li>
+         <li>Optimized sparse direct solvers and linear algebra backends, including Intel oneMKL, OpenBLAS and AOCL</li>
+         <li>Native builds for Linux, Windows and macOS on both AMD64 and ARM64</li>
+      </ul>
+      <heading>Productive modelling</heading>
+      <ul>
+         <li>Clear, human-readable, command-based input files</li>
+         <li>Interactive console with a guided <code>overview</code> introduction</li>
+         <li>Batch analysis with <code>suanPan -f model.sp</code></li>
+         <li>VTK output for post-processing and visualization in ParaView</li>
+         <li>Variables, macros and mathematical expressions for reusable models</li>
+         <li>Extensive examples, a searchable online manual and a VS Code extension with syntax highlighting and autocompletion</li>
+      </ul>
+      <heading>Ideal for</heading>
+      <ul>
+         <li>Researchers developing and validating numerical models and algorithms</li>
+         <li>Civil, structural and earthquake engineers performing nonlinear analysis</li>
+         <li>Educators and students learning finite element methods</li>
+         <li>Engineers working with material calibration, contact, buckling, dynamics and optimization</li>
+      </ul>
+      <heading>Getting started</heading>
+      <p>Launch suanPan from a terminal:</p>
+      <p><code>flatpak run io.github.tlcfem.suanPan</code></p>
+      <p>At the prompt, type <code>overview</code> for a guided introduction. To run an existing model file:</p>
+      <p><code>flatpak run io.github.tlcfem.suanPan -f model.sp</code></p>
+      <p>This Flathub build includes VTK-based visualization support and uses Intel oneMKL on x86_64 and OpenBLAS on aarch64 for linear algebra.</p>
+      <heading>Documentation and support</heading>
+      <ul>
+         <li>Manual: https://tlcfem.github.io/suanPan-manual/latest/</li>
+         <li>Examples: https://github.com/TLCFEM/suanPan/tree/dev/Example</li>
+         <li>Source code and issue tracker: https://github.com/TLCFEM/suanPan</li>
+         <li>Project website: https://suanpan.tlcfem.top</li>
+      </ul>
+      <p>suanPan is free and open-source software, distributed under the GNU General Public License v3.0 or later.</p>
    </description>
    <icon type="remote" width="350" height="350">https://github.com/TLCFEM/suanPan/blob/3c5365c414c6264cb12fee6c67414d1079abf73a/Resource/suanPan-ua.svg</icon>
    <categories>
