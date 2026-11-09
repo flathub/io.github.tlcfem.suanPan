@@ -51,7 +51,7 @@ modules:
           - '-DCMAKE_CXX_FLAGS=-Wno-stringop-overflow -Wno-stringop-overread'
         sources:
           - type: archive
-            url: https://vtk.org/files/release/9.7/VTK-9.7.1.tar.gz
+            url: https://vtk.org/files/release/9.7/VTK-9.7.2.tar.gz
             sha256: cae04fd355004cb916a409db79d53a208f1221e975aeacc7540ee67b148ee91a
       - name: mkl
         only-arches:
