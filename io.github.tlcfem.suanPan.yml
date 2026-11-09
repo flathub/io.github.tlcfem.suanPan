@@ -53,7 +53,7 @@ modules:
         sources:
           - type: archive
             url: https://vtk.org/files/release/9.7/VTK-9.7.2.tar.gz
-            sha256: affdb7a15ec34ee0174407f911ab70b646c7af01161818bbab4e1160b7eff720
+            sha256: fecef55df5caec6298ce190024060a90ce3bb515033c0f18968b9ab5c12bf796
       - name: mkl
         only-arches:
           - x86_64
