@@ -64,7 +64,7 @@
       </ul>
       <p>suanPan is free and open-source software, distributed under the GNU General Public License v3.0 or later.</p>
    </description>
-   <icon type="remote" width="350" height="350">https://github.com/TLCFEM/suanPan/blob/3c5365c414c6264cb12fee6c67414d1079abf73a/Resource/suanPan-ua.svg</icon>
+   <icon type="remote" width="350" height="350">https://raw.githubusercontent.com/flathub/io.github.tlcfem.suanPan/screenshot/suanPan.svg</icon>
    <categories>
       <category>Science</category>
       <category>Education</category>
